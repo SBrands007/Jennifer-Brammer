@@ -1,2 +1,12 @@
 [build]
   publish = "."
+
+[[redirects]]
+  from = "/gallery"
+  to = "/media#gallery"
+  status = 301
+
+[[redirects]]
+  from = "/press"
+  to = "/media#press"
+  status = 301

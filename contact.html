@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Jennifer Brammer</title>
+  <meta name="description" content="Contact Jennifer Brammer for casting, press, partnerships and general inquiries.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <a href="/" class="logo">Jennifer Brammer</a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/film-television">Film &amp; Television</a>
+        <a href="/house-of-brammer">House of Brammer</a>
+        <a href="/media">Media</a>
+        <a href="/contact" class="active" aria-current="page">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero dark">
+      <div class="glow"></div>
+      <div class="container page-hero-content">
+        <h1>Contact</h1>
+        <p class="tagline">Casting, press, partnerships and general inquiries.</p>
+      </div>
+    </section>
+
+    <section class="section cream">
+      <div class="container narrow">
+        <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" class="form">
+          <input type="hidden" name="subject" value="New inquiry from jenniferbrammer.com">
+          <p class="hidden-field"><label>Leave this field empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <div class="form-row">
+            <label class="field"><span>Name</span><input type="text" name="name" autocomplete="name" required></label>
+            <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+          </div>
+          <div class="form-row">
+            <label class="field"><span>Phone (optional)</span><input type="tel" name="phone" autocomplete="tel"></label>
+            <label class="field"><span>Inquiry type</span>
+              <select name="inquiry-type" id="inquiry-type" required>
+                <option value="General">General</option>
+                <option value="Casting &amp; Booking" data-key="casting">Casting &amp; Booking</option>
+                <option value="Press" data-key="press">Press</option>
+                <option value="Brand Partnership" data-key="partnership">Brand Partnership</option>
+                <option value="House of Brammer" data-key="society">House of Brammer</option>
+              </select>
+            </label>
+          </div>
+          <label class="field"><span>Message</span><textarea name="message" rows="6" required></textarea></label>
+          <button type="submit" class="btn">Send Message <span class="arrow">→</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <a href="/" class="logo">Jennifer Brammer</a>
+      <nav class="footer-nav">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/film-television">Film &amp; Television</a>
+        <a href="/house-of-brammer">House of Brammer</a>
+        <a href="/media">Media</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="credit"><span class="line"></span>Managed and Developed by S Brands<span class="line"></span></p>
+      <p class="copy">© <span id="year">2026</span> Jennifer Brammer. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>
