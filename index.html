@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jennifer Brammer</title>
+  <meta name="description" content="Jennifer Brammer is an actress, entrepreneur, and distinguished lifestyle icon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <a href="#top" class="logo">Jennifer Brammer</a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav">
+      <a href="#top" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#film">Film &amp; Television</a>
+      <a href="#society">House of Brammer</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#gallery">Press</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero dark">
+      <div class="glow"></div>
+      <div class="container hero-content">
+        <h1>Jennifer<br>Brammer</h1>
+        <p class="tagline">An unmistakable presence.</p>
+        <a href="#about" class="btn light">Explore <span class="arrow">→</span></a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about cream" id="about">
+      <div class="container about-grid">
+        <div class="photo about-photo">
+          <img src="images/jennifer-about.jpg" alt="Portrait of Jennifer Brammer" width="1200" height="1800" loading="lazy">
+        </div>
+        <div class="about-text">
+          <p class="eyebrow">About Jennifer</p>
+          <h2>Grace. Strength.<br>Versatility.</h2>
+          <hr class="rule">
+          <p>Jennifer Brammer is an actress, entrepreneur, and distinguished lifestyle icon. With a passion for storytelling, beauty, and meaningful connections, she brings elegance and authenticity to every role — on screen and in life.</p>
+          <a href="#film" class="btn">Learn More <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Society -->
+    <section class="society dark" id="society">
+      <img class="section-bg" src="images/house-of-brammer.jpg" alt="Golden hour terrace overlooking the sea" width="1671" height="941" loading="lazy">
+      <div class="section-shade"></div>
+      <div class="frame"></div>
+      <div class="container society-content">
+        <p class="eyebrow gold">Signature Lifestyle Brand</p>
+        <h2>House of Brammer</h2>
+        <p class="tagline">A life of distinction.</p>
+        <a href="#contact" class="btn light">Explore the House <span class="arrow">→</span></a>
+      </div>
+    </section>
+
+    <!-- Film & TV -->
+    <section class="film cream center" id="film">
+      <div class="container narrow">
+        <p class="eyebrow">On Screen</p>
+        <h2>Film &amp; Television</h2>
+        <p>A considered selection of work across film and television — presented in full on the credits page.</p>
+        <a href="#contact" class="btn">View Credits <span class="arrow">→</span></a>
+      </div>
+    </section>
+
+    <!-- Gallery & Press -->
+    <section class="gallery sand center" id="gallery">
+      <div class="container">
+        <p class="eyebrow">In the Spotlight</p>
+        <h2>Gallery &amp; Press</h2>
+        <div class="gallery-grid">
+          <div class="photo dark-photo"><div class="placeholder-label inside"><strong>Photo Placeholder</strong><span>Gallery 01 · Portrait</span><span>Approved Photograph Required</span></div></div>
+          <div class="photo light-photo"><div class="placeholder-label inside"><strong>Photo Placeholder</strong><span>Gallery 02 · Full Length</span><span>Approved Photograph Required</span></div></div>
+          <div class="photo dark-photo"><div class="placeholder-label inside"><strong>Photo Placeholder</strong><span>Gallery 03 · Black &amp; White</span><span>Approved Photograph Required</span></div></div>
+          <div class="photo gallery-media"><video src="videos/gallery-04.mp4" poster="images/gallery-04-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Jennifer Brammer lifestyle video"></video></div>
+          <div class="photo dark-photo wide-mobile"><div class="placeholder-label inside"><strong>Photo Placeholder</strong><span>Gallery 05 · Editorial</span><span>Approved Photograph Required</span></div></div>
+        </div>
+        <div class="btn-row">
+          <a href="#gallery" class="btn">View Gallery <span class="arrow">→</span></a>
+          <a href="#contact" class="btn">Press <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-top">
+      <a href="#top" class="logo">Jennifer Brammer</a>
+      <nav class="footer-nav">
+        <a href="#top">Home</a>
+        <a href="#about">About</a>
+        <a href="#film">Film &amp; Television</a>
+        <a href="#society">House of Brammer</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#gallery">Press</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="credit"><span class="line"></span>Managed and Developed by S Brands<span class="line"></span></p>
+      <p class="copy">© <span id="year">2026</span> Jennifer Brammer. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const header = document.querySelector('.site-header');
+    toggle.addEventListener('click', () => {
+      const open = header.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.querySelectorAll('.main-nav a').forEach(a =>
+      a.addEventListener('click', () => {
+        header.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      })
+    );
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
