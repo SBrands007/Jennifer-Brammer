@@ -1,1 +1,144 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import Media from '../components/Media.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { site, images } from '../data/site';
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: site.name,
+  url: site.url,
+};
+---
+<BaseLayout schema={[websiteSchema]}>
+  <!-- Hero -->
+  <section class="hero on-dark" aria-labelledby="hero-title">
+    <div class="hero__media"><Media image={images.hero} eager /></div>
+    <div class="container hero__content">
+      <p class="eyebrow hero-anim" style="--d: 150ms">{site.roles.join(' · ')}</p>
+      <h1 id="hero-title" class="hero-anim" style="--d: 300ms">Jennifer<br />Brammer</h1>
+      <p class="lede hero-anim" style="--d: 550ms">{site.tagline}</p>
+      <div class="hero__cta hero-anim" style="--d: 750ms"><Button href="/about" label="Explore" variant="light" /></div>
+    </div>
+  </section>
+
+  <!-- About teaser -->
+  <section class="section about-teaser" aria-labelledby="about-title">
+    <div class="container split">
+      <div data-reveal>
+        <Media image={images.aboutPortrait} ratio="4 / 3" tone="light" sizes="(min-width: 900px) 45vw, 100vw" />
+      </div>
+      <div data-reveal style="--reveal-delay: 150ms">
+        <span class="eyebrow">About Jennifer</span>
+        <h2 id="about-title">Grace. Strength. Versatility.</h2>
+        <hr class="rule" />
+        <p>
+          Jennifer Brammer is an actress, entrepreneur, and distinguished lifestyle icon. With a passion
+          for storytelling, beauty, and meaningful connections, she brings elegance and authenticity to
+          every role — on screen and in life.
+        </p>
+        <Button href="/about" label="Learn more" />
+      </div>
+    </div>
+  </section>
+
+  <!-- The Brammer Society -->
+  <section class="society on-dark" aria-labelledby="society-title">
+    <div class="society__media"><Media image={images.society} /></div>
+    <div class="container society__content" data-reveal>
+      <span class="eyebrow">Signature Lifestyle Brand</span>
+      <h2 id="society-title">The Brammer Society</h2>
+      <p class="lede">A life of distinction.</p>
+      <div class="society__cta"><Button href="/the-brammer-society" label="Explore the Society" variant="light" /></div>
+    </div>
+  </section>
+
+  <!-- Film & Television teaser -->
+  <section class="section center screen-teaser" aria-labelledby="screen-title">
+    <div class="container">
+      <SectionHeading eyebrow="On Screen" title="Film & Television" align="center" />
+      <p class="screen-teaser__text" data-reveal>
+        A considered selection of work across film and television — presented in full on the
+        credits page.
+      </p>
+      <div data-reveal><Button href="/film-television" label="View credits" /></div>
+    </div>
+  </section>
+
+  <!-- Gallery & Press -->
+  <section class="section section--deep spotlight" aria-labelledby="spotlight-title">
+    <div class="container">
+      <div class="center">
+        <span class="eyebrow" data-reveal>In the Spotlight</span>
+        <h2 id="spotlight-title" data-reveal>Gallery &amp; Press</h2>
+      </div>
+      <ul class="spotlight__grid">
+        {images.gallery.slice(0, 5).map((img, i) => (
+          <li data-reveal style={`--reveal-delay: ${i * 90}ms`}>
+            <Media image={img} ratio="4 / 5" tone={i % 2 ? 'light' : 'dark'} sizes="(min-width: 900px) 20vw, 50vw" />
+          </li>
+        ))}
+      </ul>
+      <div class="center spotlight__cta" data-reveal>
+        <Button href="/gallery" label="View gallery" />
+        <Button href="/press" label="Press" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .hero {
+    position: relative; min-height: 100svh; display: flex; align-items: center;
+    background: var(--espresso); color: var(--ivory); overflow: hidden;
+  }
+  .hero__media { position: absolute; inset: 0; }
+  .hero__media::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background:
+      linear-gradient(90deg, rgba(18, 16, 14, 0.85) 0%, rgba(18, 16, 14, 0.35) 55%, rgba(18, 16, 14, 0.1) 100%),
+      linear-gradient(0deg, rgba(18, 16, 14, 0.6) 0%, transparent 35%);
+  }
+  .hero__media :global(.media__label) { position: absolute; right: 0; bottom: 0; text-align: right; }
+  .hero__content { position: relative; z-index: 1; padding-top: 120px; padding-bottom: 120px; }
+  .hero h1 { font-size: clamp(54px, 8.2vw, 112px); line-height: 0.98; }
+  .hero__cta { margin-top: 44px; }
+  .hero .eyebrow { margin-bottom: 30px; }
+
+  /* Society */
+  .society {
+    position: relative; min-height: clamp(460px, 60vw, 640px);
+    display: flex; align-items: center; background: var(--espresso); color: var(--ivory); overflow: hidden;
+  }
+  .society__media { position: absolute; inset: 0; }
+  .society__media::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(18, 16, 14, 0.9) 0%, rgba(18, 16, 14, 0.4) 60%, transparent 100%);
+  }
+  .society__media :global(.media__label) { position: absolute; right: 0; bottom: 0; text-align: right; }
+  .society__content { position: relative; z-index: 1; padding-block: 96px; }
+  .society__cta { margin-top: 40px; }
+
+  /* Screen teaser */
+  .screen-teaser__text { margin: 0 auto 36px; }
+
+  /* Spotlight */
+  .spotlight h2 { margin-bottom: clamp(36px, 4vw, 52px); }
+  .spotlight__grid {
+    list-style: none; margin: 0; padding: 0;
+    display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr);
+  }
+  .spotlight__grid li:last-child { grid-column: 1 / -1; }
+  .spotlight__grid li:last-child :global(.media) { aspect-ratio: 16 / 9 !important; }
+  @media (min-width: 900px) {
+    .spotlight__grid { grid-template-columns: repeat(5, 1fr); }
+    .spotlight__grid li:last-child { grid-column: auto; }
+    .spotlight__grid li:last-child :global(.media) { aspect-ratio: 4 / 5 !important; }
+  }
+  .spotlight__grid :global(.media__label) { padding: 18px; font-size: 9px; }
+  .spotlight__cta { margin-top: 48px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+</style>
 
