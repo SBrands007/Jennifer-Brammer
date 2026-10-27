@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>House of Brammer | Jennifer Brammer</title>
+  <meta name="description" content="House of Brammer — the signature lifestyle brand of Jennifer Brammer. Join the list for news, invitations and releases.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <a href="/" class="logo">Jennifer Brammer</a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/film-television">Film &amp; Television</a>
+        <a href="/house-of-brammer" class="active" aria-current="page">House of Brammer</a>
+        <a href="/media">Media</a>
+        <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero dark">
+      <img class="section-bg" src="/images/house-of-brammer.jpg" alt="Golden hour terrace overlooking the sea" style="object-position: center;">
+      <div class="section-shade"></div>
+      <div class="container page-hero-content">
+        <p class="eyebrow gold">Signature Lifestyle Brand</p>
+        <h1>House of<br>Brammer</h1>
+        <p class="tagline">A life of distinction.</p>
+      </div>
+    </section>
+
+    <section class="luxe dark">
+      <div class="container luxe-grid">
+        <div class="photo luxe-photo">
+          <img src="/images/jb-luxe.jpg" alt="JB Luxe — coming soon" width="1536" height="1024" loading="lazy">
+        </div>
+        <div class="luxe-text">
+          <p class="eyebrow gold">Coming Soon</p>
+          <h2>JB Luxe</h2>
+          <hr class="rule">
+          <p class="tagline">Founded by Jennifer Brammer</p>
+          <a href="#join" class="btn light">Be the First to Know <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cream">
+      <div class="container narrow center">
+        <p class="eyebrow">The House</p>
+        <h2>Beauty, Connection, Intention</h2>
+        <hr class="rule centered">
+        <p>House of Brammer is Jennifer Brammer's signature lifestyle brand — a celebration of beauty, meaningful connection and a life lived with distinction.</p>
+      </div>
+    </section>
+
+    <section class="section sand" id="join">
+      <div class="container narrow">
+        <div class="center">
+          <p class="eyebrow">Join the House</p>
+          <h2>Be the First to Know</h2>
+          <p class="muted-copy">Sign up for news, private invitations and first access to new releases.</p>
+        </div>
+        <form name="house-of-brammer" method="POST" action="/thank-you?form=society" data-netlify="true" netlify-honeypot="bot-field" class="form">
+          <input type="hidden" name="subject" value="New House of Brammer signup">
+          <p class="hidden-field"><label>Leave this field empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <div class="form-row">
+            <label class="field"><span>First name</span><input type="text" name="first-name" autocomplete="given-name" required></label>
+            <label class="field"><span>Last name</span><input type="text" name="last-name" autocomplete="family-name"></label>
+          </div>
+          <label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+          <label class="check"><input type="checkbox" name="consent" value="yes" required><span>I'd like to receive news, invitations and releases from House of Brammer.</span></label>
+          <button type="submit" class="btn">Join the House <span class="arrow">→</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <a href="/" class="logo">Jennifer Brammer</a>
+      <nav class="footer-nav">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/film-television">Film &amp; Television</a>
+        <a href="/house-of-brammer">House of Brammer</a>
+        <a href="/media">Media</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="credit"><span class="line"></span>Managed and Developed by S Brands<span class="line"></span></p>
+      <p class="copy">© <span id="year">2026</span> Jennifer Brammer. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>

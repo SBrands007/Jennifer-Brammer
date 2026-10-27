@@ -7,31 +7,30 @@
   <meta name="description" content="Jennifer Brammer is an actress, entrepreneur, and distinguished lifestyle icon.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
   <header class="site-header" id="top">
-    <a href="#top" class="logo">Jennifer Brammer</a>
+    <a href="/" class="logo">Jennifer Brammer</a>
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span>
     </button>
     <nav class="main-nav">
-      <a href="#top" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#film">Film &amp; Television</a>
-      <a href="#society">House of Brammer</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#gallery">Press</a>
-      <a href="#contact">Contact</a>
+      <a href="/" class="active" aria-current="page">Home</a>
+      <a href="/about">About</a>
+      <a href="/film-television">Film &amp; Television</a>
+      <a href="/house-of-brammer">House of Brammer</a>
+      <a href="/media">Media</a>
+      <a href="/contact">Contact</a>
     </nav>
   </header>
 
   <main>
     <!-- Hero -->
     <section class="hero dark">
-      <img class="hero-img" src="images/hero-jennifer.jpg" alt="Jennifer Brammer" width="1600" height="2400" fetchpriority="high">
+      <img class="hero-img" src="/images/hero-jennifer.jpg" alt="Jennifer Brammer" width="1600" height="2400" fetchpriority="high">
       <div class="hero-shade"></div>
       <div class="container hero-content">
         <h1>Jennifer<br>Brammer</h1>
@@ -44,28 +43,28 @@
     <section class="about cream" id="about">
       <div class="container about-grid">
         <div class="photo about-photo">
-          <img src="images/jennifer-about.jpg" alt="Portrait of Jennifer Brammer" width="1200" height="1800" loading="lazy">
+          <img src="/images/jennifer-about.jpg" alt="Portrait of Jennifer Brammer" width="1200" height="1800" loading="lazy">
         </div>
         <div class="about-text">
           <p class="eyebrow">About Jennifer</p>
           <h2>Grace. Strength.<br>Versatility.</h2>
           <hr class="rule">
           <p>Jennifer Brammer is an actress, entrepreneur, and distinguished lifestyle icon. With a passion for storytelling, beauty, and meaningful connections, she brings elegance and authenticity to every role — on screen and in life.</p>
-          <a href="#film" class="btn">Learn More <span class="arrow">→</span></a>
+          <a href="/about" class="btn">Learn More <span class="arrow">→</span></a>
         </div>
       </div>
     </section>
 
     <!-- Society -->
     <section class="society dark" id="society">
-      <img class="section-bg" src="images/house-of-brammer.jpg" alt="Golden hour terrace overlooking the sea" width="1671" height="941" loading="lazy">
+      <img class="section-bg" src="/images/house-of-brammer.jpg" alt="Golden hour terrace overlooking the sea" width="1671" height="941" loading="lazy">
       <div class="section-shade"></div>
       <div class="frame"></div>
       <div class="container society-content">
         <p class="eyebrow gold">Signature Lifestyle Brand</p>
         <h2>House of Brammer</h2>
         <p class="tagline">A life of distinction.</p>
-        <a href="#contact" class="btn light">Explore the House <span class="arrow">→</span></a>
+        <a href="/house-of-brammer" class="btn light">Explore the House <span class="arrow">→</span></a>
       </div>
     </section>
 
@@ -75,41 +74,40 @@
         <p class="eyebrow">On Screen</p>
         <h2>Film &amp; Television</h2>
         <p>A considered selection of work across film and television — presented in full on the credits page.</p>
-        <a href="#contact" class="btn">View Credits <span class="arrow">→</span></a>
+        <a href="/film-television" class="btn">View Credits <span class="arrow">→</span></a>
       </div>
     </section>
 
-    <!-- Gallery & Press -->
+    <!-- Media -->
     <section class="gallery sand center" id="gallery">
       <div class="container">
         <p class="eyebrow">In the Spotlight</p>
-        <h2>Gallery &amp; Press</h2>
+        <h2>Media</h2>
+        <div class="ig-row"><a class="ig-link" href="https://www.instagram.com/lollipippen?cplk=a3gzejhjcHFsYjU1" target="_blank" rel="noopener noreferrer" aria-label="Jennifer Brammer on Instagram (opens in a new tab)"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></svg>@lollipippen</a></div>
         <div class="gallery-grid">
-          <div class="photo gallery-media"><img src="images/gallery-01.jpg" alt="Portrait of Jennifer Brammer" width="1000" height="1500" loading="lazy" style="object-position: center 20%;"></div>
-          <div class="photo gallery-media"><img src="images/gallery-02.jpg" alt="Black and white portrait of Jennifer Brammer in a white suit" width="933" height="1400" loading="lazy" style="object-position: center 15%;"></div>
-          <div class="photo gallery-media"><img src="images/gallery-05.jpg" alt="Jennifer Brammer in a red leather jacket" width="933" height="1400" loading="lazy" style="object-position: center 15%;"></div>
-          <div class="photo gallery-media"><video src="videos/gallery-04.mp4" poster="images/gallery-04-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Jennifer Brammer lifestyle video"></video></div>
-          <div class="photo gallery-media wide-mobile"><img src="images/gallery-03.jpg" alt="Jennifer Brammer seated in a black top and jeans" width="933" height="1400" loading="lazy" style="object-position: center 15%;"></div>
+          <div class="photo gallery-media"><img src="/images/gallery-01.jpg" alt="Portrait of Jennifer Brammer" width="1000" height="1500" loading="lazy" style="object-position: center 20%;"></div>
+          <div class="photo gallery-media"><img src="/images/gallery-02.jpg" alt="Black and white portrait of Jennifer Brammer in a white suit" width="933" height="1400" loading="lazy" style="object-position: center 15%;"></div>
+          <div class="photo gallery-media"><img src="/images/gallery-05.jpg" alt="Jennifer Brammer in a red leather jacket" width="933" height="1400" loading="lazy" style="object-position: center 15%;"></div>
+          <div class="photo gallery-media"><video src="/videos/gallery-04.mp4" poster="/images/gallery-04-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Jennifer Brammer lifestyle video"></video></div>
+          <div class="photo gallery-media wide-mobile"><img src="/images/gallery-03.jpg" alt="Jennifer Brammer seated in a black top and jeans" width="933" height="1400" loading="lazy" style="object-position: center 15%;"></div>
         </div>
         <div class="btn-row">
-          <a href="#gallery" class="btn">View Gallery <span class="arrow">→</span></a>
-          <a href="#contact" class="btn">Press <span class="arrow">→</span></a>
+          <a href="/media" class="btn">Media <span class="arrow">→</span></a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" id="contact">
+  <footer class="site-footer">
     <div class="container footer-top">
-      <a href="#top" class="logo">Jennifer Brammer</a>
+      <a href="/" class="logo">Jennifer Brammer</a>
       <nav class="footer-nav">
-        <a href="#top">Home</a>
-        <a href="#about">About</a>
-        <a href="#film">Film &amp; Television</a>
-        <a href="#society">House of Brammer</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#gallery">Press</a>
-        <a href="#contact">Contact</a>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/film-television">Film &amp; Television</a>
+        <a href="/house-of-brammer">House of Brammer</a>
+        <a href="/media">Media</a>
+        <a href="/contact">Contact</a>
       </nav>
     </div>
     <div class="footer-bottom">
@@ -118,20 +116,6 @@
     </div>
   </footer>
 
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const header = document.querySelector('.site-header');
-    toggle.addEventListener('click', () => {
-      const open = header.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open);
-    });
-    document.querySelectorAll('.main-nav a').forEach(a =>
-      a.addEventListener('click', () => {
-        header.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      })
-    );
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="/main.js"></script>
 </body>
 </html>
