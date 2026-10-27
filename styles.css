@@ -205,3 +205,23 @@ p { line-height: 1.85; font-size: 0.98rem; }
 .gallery-media { background: var(--ink-2); }
 .gallery-media video, .gallery-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .gallery-media video { object-position: center top; }
+
+/* Hero photo */
+.hero { background: #171717; }
+.hero-img {
+  position: absolute; top: 0; right: 0; z-index: 0;
+  width: 58%; height: 100%; object-fit: cover; object-position: center 15%;
+}
+.hero-shade {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    linear-gradient(90deg, #171717 0%, #171717 40%, rgba(23, 23, 23, 0.6) 55%, rgba(23, 23, 23, 0) 75%),
+    linear-gradient(0deg, rgba(23, 23, 23, 0.6) 0%, rgba(23, 23, 23, 0) 25%);
+}
+@media (max-width: 900px) {
+  .hero { min-height: 100svh; align-items: flex-end; padding-bottom: 5rem; }
+  .hero-img { width: 100%; object-position: center 10%; }
+  .hero-shade {
+    background: linear-gradient(0deg, rgba(23, 23, 23, 0.95) 0%, rgba(23, 23, 23, 0.6) 40%, rgba(23, 23, 23, 0.1) 70%);
+  }
+}
