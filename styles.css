@@ -184,3 +184,7 @@ p { line-height: 1.85; font-size: 0.98rem; }
   .footer-nav { justify-content: center; }
   .credit .line { width: 24px; }
 }
+
+/* About photo */
+.about-photo { aspect-ratio: 4 / 5; max-width: 480px; width: 100%; justify-self: center; background: var(--ink-2); }
+.about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
