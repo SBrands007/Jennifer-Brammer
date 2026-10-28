@@ -292,3 +292,7 @@ p { line-height: 1.85; font-size: 0.98rem; }
   border-bottom: 1px solid transparent; padding-bottom: 0.2rem; transition: border-color 0.3s;
 }
 .ig-link:hover { border-color: #000; }
+
+/* SEO: visual-only heading styles so semantic tags can change without changing the look */
+.hero-title { font-family: var(--serif); font-weight: 400; text-transform: uppercase; line-height: 1.02; letter-spacing: 0.04em; color: #f5efe6; font-size: clamp(2.8rem, 7vw, 5.6rem); }
+h1.as-h2 { font-size: clamp(2rem, 3.6vw, 2.9rem); letter-spacing: 0.08em; color: var(--ink); margin-bottom: 2rem; }
