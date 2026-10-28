@@ -70,6 +70,6 @@ This lists every page that still shows placeholder content. It exits with an err
    - **Option B (keep DNS at your registrar):** add an `A` record for host `@` pointing to Netlify's load-balancer IP (currently `75.2.60.5`), and a `CNAME` record for host `www` pointing to `<your-site>.netlify.app`. Delete any older `A`, `AAAA`, or `CNAME` records for `@` and `www` that conflict.
 6. **HTTPS.** Once DNS has propagated (minutes to 48 hours), Netlify issues a free Let's Encrypt certificate automatically. You can check it under **Domain management → HTTPS**.
 7. **Set the primary domain.** Make `jenniferbrammer.com` (without www) the primary domain. This matches the canonical URLs and the www→apex redirect in `netlify.toml`.
-8. **Tell Google.** In Google Search Console (search.google.com/search-console), add the domain property, verify it with the DNS TXT record it gives you, and submit `https://jenniferbrammer.com/sitemap-index.xml`.
+8. **Tell Google.** In Google Search Console (search.google.com/search-console), add the domain property `jenniferbrammer.com`, verify it with the DNS TXT record it gives you, and submit `https://jenniferbrammer.com/sitemap.xml`. Use URL Inspection to inspect the homepage and request indexing. Check the Pages report for indexing issues; absence from search alone does not establish whether the site has been submitted.
 
 After that, every `git push` to `main` redeploys the site automatically.
